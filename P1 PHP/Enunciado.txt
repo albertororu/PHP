@@ -1,0 +1,25 @@
+Cree una pequeña aplicación web (en PHP) para gestionar una lista de compras sencilla. Inicialmente será
+mostrar un pequeño menú con las siguientes opciones:
+• Mostrar lista
+• Insertar
+• Modificar
+• Borrar
+Para insertar artículos en la lista de compras, cree un formulario solicitando lo siguiente
+información:
+• Nombre
+• Cantidad
+• Precio
+El Nombre se refiere al producto que se agregará a la lista, Cantidad indica el número de unidades que se comprarán para ese producto, y el precio es el valor unitario de cada producto.
+Toda la información relativa a la lista de compras se almacenará en una matriz. El nombre es obligatorio. campo, y el registro no debe agregarse a la matriz si está vacío, mostrando una advertencia 
+mensaje al usuario. Si la inserción es exitosa, notifique al usuario y muestre la lista. Al mostrar la lista de compras, ésta debe presentarse en una tabla (usando el formato HTML
+etiqueta <table>) o, si se prefiere, usar CSS con la propiedad de visualización (display: table). Cada fila debe tener 4 columnas: Nombre, Cantidad, Precio, Total. Las primeras tres columnas hacen referencia a la
+información almacenada, y el cuarto es un campo calculado que multiplica el precio del producto por la cantidad. Al final de la lista, otro campo calculado debería mostrar la suma de todos
+precios totales, que indica el Precio Total de Compra. Si no hay nada que mostrar, notifique al usuario.
+La opción de modificación desplegará un formulario con los datos del registro a modificar cargado y permitirá cambiar cualquiera de los 3 campos (Nombre, Cantidad, Precio). Sin embargo, sólo
+Al igual que en la inserción, los datos no se actualizarán en la matriz si el campo Nombre se deja vacío, mostrando un mensaje de advertencia al usuario. Si la modificación es exitosa, notifique al usuario.
+y mostrar la lista actualizada. Al eliminar un registro de la lista, se debe eliminar de la matriz. Si la eliminación es
+exitoso, notifique al usuario y muestre la lista actualizada. Todo el código debe estar debidamente documentado mediante comentarios PHP.
+Se deben utilizar funciones y se pueden crear tantas como sea necesario. debería haber en menos dos funciones:
+Calcular_Precio_Total_Producto: tendrá un parámetro de salida que devuelve el valor calculado importe (pasado por referencia).
+Calcular_Precio_Compra_Total: será la función que devuelva el importe calculado.
+Todas las funciones deben implementarse en un archivo separado llamado funciones.php.

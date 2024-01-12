@@ -1,0 +1,24 @@
+::U1::
+What type of simple data in PHP exists?: {
+    ~%-33%Integer, undefined and null.
+    =Boolean,integer,float,string and null.
+    ~%-33%Main,classes and objects.
+    ~%-33%Arrays,forms and database.
+ }
+
+::U1::
+$valor++; What type of operator is it?: {
+    ~%-33%Sum.
+    =Increment.
+    ~%-33%Rest.
+    ~%-33%Decrement.
+ }
+
+::U1::
+Which of the following variables has been declared incorrectly?: {
+
+    ~%-33%$_students = 50;
+    = $5students = 50;
+    ~%-33%$students_class = 50;
+    ~%-33%$students = 50;
+}
