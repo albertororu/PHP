@@ -7,7 +7,7 @@
     <style>
     table td {
       border: 1px black solid;
-      padding: 1px;
+      padding: 2px;
     }
   </style>
 </head>
