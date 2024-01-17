@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}¡Bienvenido {{nombre}}!{% endblock %}
+{% block body %}
+    <h1>Hola {{ nombre }}</h1>
+
+     {% if nombre == 'admin' %}
+        <p>Eres un administrador. ¡Bienvenido!</p>
+    {% else %}
+        <p>Gracias por visitarnos, {{ nombre }}.</p>
+    {% endif %}
+
+{% endblock %}
