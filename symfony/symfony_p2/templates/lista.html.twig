@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Lista de Productos</h1>
+
+    {% if productos is not empty %}
+        <ul>
+            {% for producto in productos %}
+                <li>
+                    {{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }} USD
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay productos disponibles.</p>
+    {% endif %}
+{% endblock %}
