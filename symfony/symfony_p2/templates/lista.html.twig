@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+
 {% block body %}
     <h1>Lista de Productos</h1>
 
@@ -6,7 +7,11 @@
         <ul>
             {% for producto in productos %}
                 <li>
-                    {{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }} USD
+                    {{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }} USD 
+                    <form action="/carrito" method="post">
+                        <input type="hidden" name="id" value={{ producto.id }}>
+                        <button type="submit">Agregar al carrito</button>
+                    </form>
                 </li>
             {% endfor %}
         </ul>

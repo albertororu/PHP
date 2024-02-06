@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Carrito de Compras</h1>
+
+    <ul>
+        {% for producto in carrito %}
+            <li>{{ producto.nombre}} - {{ producto.descripcion }} €</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
