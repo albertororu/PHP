@@ -1,11 +1,22 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}Productos{% endblock %}
 {% block body %}
-    <h1>Carrito de Compras</h1>
+<table>
+<tr>
+<td colspan=2>Carrito de la compra</td>
+</tr>
+<tr>
+    <td>Nombre del producto</td>
+    <td>Precio del producto</td>
+    </tr>
+{% for producto in carrito %}
+    <tr>
+    <td>{{producto.nombre}}</td>
+    <td>{{producto.precio}} $</td>
+    </tr>
+{% endfor %}
+</table>
+<a href="/limpiar">🧹 Limpiar carrito</a>
+<a href="/producto">↩ Volver</a>
 
-    <ul>
-        {% for producto in carrito %}
-            <li>{{ producto.nombre}} - {{ producto.descripcion }} €</li>
-        {% endfor %}
-    </ul>
 {% endblock %}
