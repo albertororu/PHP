@@ -44,7 +44,7 @@
         try {
             $conn = new PDO("mysql:host=localhost; dbname=tarea4", "usu4", "usu4");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = 'DELETE FROM usuarios WHERE id = ' . $id . ' ';
+            $sql = 'DELETE FROM usuarios WHERE id = ' . $id . '' ;
             $conn->exec($sql);
 
         } catch (PDOException $e) {
