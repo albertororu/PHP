@@ -1,0 +1,17 @@
+{# templates/login/login.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Inicio de Sesión{% endblock %}
+
+{% block body %}
+    <h1>Inicio de Sesión</h1>
+
+    {# Renderizamos el formulario de inicio de sesión #}
+    <form method="post">
+        {{ form_row(formulario.username) }}
+        {{ form_row(formulario.password) }}
+
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+{% endblock %}

@@ -1,21 +1,19 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}Productos{% endblock %}
 {% block body %}
-    <h1>Lista de Productos</h1>
-
-    {% if productos is not empty %}
-        <ul>
-            {% for producto in productos %}
-                <li>
-                    {{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }} USD 
-                    <form action="/carrito" method="post">
-                        <input type="hidden" name="id" value={{ producto.id }}>
-                        <button type="submit">Agregar al carrito</button>
-                    </form>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No hay productos disponibles.</p>
-    {% endif %}
+<table>
+<tr>
+    <td>Nombre del producto</td>
+    <td>Precio del producto</td>
+    <td>Enlace al producto</td>
+    </tr>
+{% for producto in productos %}
+    <tr>
+    <td>{{producto.nombre}}</td>
+    <td>{{producto.precio}} $</td>
+    <td><a href='/producto/{{producto.id}}'>Ver producto</a></td>
+    <td><a href='/carrito?id={{producto.id}}'>Anadir al carrito</a></td>
+    </tr>
+{% endfor %}
+</table>
 {% endblock %}
