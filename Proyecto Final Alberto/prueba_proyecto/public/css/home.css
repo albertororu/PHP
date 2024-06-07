@@ -1,0 +1,79 @@
+body {
+    width: 100%;
+    min-width:100%
+}
+.navegacion {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #061459;
+}
+.navegacion>div {
+    flex: 1;
+}
+.imagenLogo  img {
+    width: 40%;
+    height: 100%;
+    margin-top: 0 !important;
+}
+
+.imagenLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    padding-left: 7%;
+}
+.navLink {
+    display: flex;
+    gap: 6em;
+    align-items: center;
+    justify-content: center;
+}
+
+.navLink a{
+    text-decoration: none;
+    color: #f9f9f9;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    font-weight: 300;
+    transition: 0.25s ease-in-out;
+}
+
+.navLink a:hover {
+    transform: scale(1.2);
+}
+
+.perfil {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #666666;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 1%;
+    top: 90%;
+    left: 0%;
+    line-height: 2.3em;
+    transform: translateX(-44px);
+}
+.perfil:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd; 
+}
+
+

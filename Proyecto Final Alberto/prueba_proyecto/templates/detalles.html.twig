@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Citas{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/detalles.css') }}">
+{% endblock %}
+{% block body %}
+<div class="contenedor">
+    <h1 class="title">Lista de Citas</h1>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Usuario</th>
+                <th>Pista</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alquiler in alquileres %}
+                <tr>
+                    <td>{{ alquiler.dia|date('Y-m-d') }}</td>
+                    <td>{{ alquiler.hora|date('H:i') }}</td>
+                    <td>{{ alquiler.idUser.getUsername() }}</td>
+                    <td>{{ alquiler.idPista }}</td>
+                    <td><a href="{{ path('eliminar_cita', {'id': alquiler.id}) }}" class="btn-delete">Eliminar</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>    
+{% endblock %}

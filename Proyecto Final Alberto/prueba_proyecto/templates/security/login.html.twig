@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div id="root2"></div>
+  <meta name="csrf-token" content="{{ csrf_token('authenticate') }}">
+  <meta name="last-username" content="{{ last_username }}">
+  <meta name="error" content="{{ error ? error.messageKey|trans(error.messageData, 'security') : '' }}">
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endblock %}

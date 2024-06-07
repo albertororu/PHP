@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+}
+
+.containerFormulario {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    margin-top: 5%;
+    color: #333;
+}
+
+form {
+    background: #fff;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 5%;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 32%;
+    margin-top: 4%;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+.navegacion {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #061459;
+}
+
+.navegacion>div {
+    flex: 1;
+}
+.imagenLogo img {
+    width: 50%;
+    height: 70%;
+    margin-top: 0 !important;
+    object-fit: cover;
+    padding-top: 3%;
+}
+
+.imagenLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    padding-left: 7%;
+}
+.navLink a{
+    text-decoration: none;
+    color: #f9f9f9;
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    font-weight: 300;
+    transition: 0.25s ease-in-out;
+}
+
+.navLink a:hover {
+    transform: scale(1.2);
+}
+.navLink {
+    display: flex;
+    gap: 6em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.perfil {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #666666;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 1%;
+    top: 90%;
+    left: 0%;
+    line-height: 2.3em;
+    transform: translateX(-44px);
+}
+.perfil:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd; 
+}
+
+
+ 

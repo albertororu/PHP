@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}PlazaFitt{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
+    {% endblock %}
+</head>
+<body>
+<nav>
+    <div class="navegacion">
+        <div class="imagenLogo">
+            <a href="{{ path('home') }}"> 
+                <img src="images/logoProyecto.png" width="100" height="100">
+             </a>
+        </div>
+
+        <div class="navLink"> 
+            <a href="{{ path('home') }}">Inicio</a>
+
+            {% if app.user %}
+                <a href="{{ path('app_cita') }}">Reservar</a>
+
+                <div class="perfil">
+                    <a href="#"><i class="fas fa-user"></i> {{ app.user.username }}</a>
+                    <div class="dropdown-menu">
+                        <a href="{{ path('ver_cita', {'id': 8}) }}">Ver reserva</a>
+                        <a href="{{ path('perfil_editar') }}">Editar Perfil</a>
+                        <a href="{{ path('app_logout') }}">Cerrar sesión</a>
+                    </div>
+                </div>
+
+            {% else %}
+                <a href="{{ path('app_login') }}">Iniciar Sesión</a>
+                <a href="{{ path('app_register') }}">Registrarse</a>
+
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+  
+
+    <script>
+        window.isAuthenticated = {{ app.user ? 'true' : 'false' }};
+    </script>
+    
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">{{ message }}</div>
+        {% endfor %}
+    {% endfor %}
+    {% block body %}
+
+    {% endblock %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
+      <footer>
+        {% block footer %}{% endblock %}
+    </footer>
+</body>
+</html>
+

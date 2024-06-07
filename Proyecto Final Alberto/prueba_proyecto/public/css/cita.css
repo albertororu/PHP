@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    height: 110vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.contenedor1 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    margin: 8% 35%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+.datosFormulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.datosFormulario .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.datosFormulario label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'Montserrat';
+}
+
+.datosFormulario input[type="text"],
+.datosFormulario input[type="email"],
+.datosFormulario input[type="password"],
+.datosFormulario input[type="date"],
+.datosFormulario select,
+.datosFormulario textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+    font-family: 'Montserrat';
+}
+
+.datosFormulario input[type="text"]:focus,
+.datosFormulario input[type="email"]:focus,
+.datosFormulario input[type="password"]:focus,
+.datosFormulario input[type="date"]:focus,
+.datosFormulario select:focus,
+.datosFormulario textarea:focus {
+    border-color: #a1c4fd;
+}
+
+.botonEnviar {
+    background-color: #061459;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 5%;
+    font-family: 'Montserrat';
+}
+
+.botonEnviar:hover {
+    background-color: #89b0ff;
+}
+
+div#inserta_alquiler_Hora {
+    display: flex;
+    width: 95%;
+    margin-left: 2%;
+}

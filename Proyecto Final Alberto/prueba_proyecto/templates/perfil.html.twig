@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/perfil.css') }}">
+     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+{% endblock %}
+{% block body %}
+<div class="containerFormulario">
+    <h1>Edita tu perfil</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.username, {label: 'Nombre de usuario'}) }}
+        {{ form_row(form.email, {label: 'Email'}) }}
+        {{ form_row(form.phone, {label: 'Número de telefono'}) }}
+        {{ form_row(form.birthdate, {label: 'Fecha de nacimiento'}) }}
+        <button class="btn">Guardar cambios</button>
+    {{ form_end(form) }}
+</div>    
+{% endblock %}
+{% block footer %}
+    {% include 'footer.html.twig' %}
+{% endblock %}
